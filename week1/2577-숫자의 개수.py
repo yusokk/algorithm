@@ -1,0 +1,16 @@
+A = int(input())
+B = int(input())
+C = int(input())
+
+test = str(A*B*C)
+
+print(test.count("0"))
+print(test.count("1"))
+print(test.count("2"))
+print(test.count("3"))
+print(test.count("4"))
+print(test.count("5"))
+print(test.count("6"))
+print(test.count("7"))
+print(test.count("8"))
+print(test.count("9"))
