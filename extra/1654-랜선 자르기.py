@@ -18,9 +18,12 @@ def cut_lan():
             cut = 1
         for k in K_list:
             cut_num += k // cut
-        if N == cut_num:
-            return cut
-        elif N < cut_num:
+        if p2 <= p1:
+            if N <= cut_num:
+                return cut
+            else:
+                return cut-1
+        if N <= cut_num:
             p1 = cut + 1
         else:
             p2 = cut - 1
