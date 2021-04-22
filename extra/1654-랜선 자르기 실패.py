@@ -1,8 +1,5 @@
 import sys
-# sys.stdin = open("../test/lan-wire.txt", "r")
-K_N = list(map(int, sys.stdin.readline().split()))
-K = K_N[0]
-N = K_N[1]
+K, N = list(map(int, sys.stdin.readline().split()))
 K_list = list()
 for _ in range(K):
     temp = int(sys.stdin.readline())
@@ -18,10 +15,10 @@ def cut_lan():
         cut_num = 0
         cut = (p1+p2)//2
         if cut == 0:
-            return 1
+            cut = 1
         for k in K_list:
             cut_num += k // cut
-        if N <= cut_num:
+        if N == cut_num:
             return cut
         elif N < cut_num:
             p1 = cut + 1
